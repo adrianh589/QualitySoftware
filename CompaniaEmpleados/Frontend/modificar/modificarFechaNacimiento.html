@@ -43,6 +43,12 @@
           <div class="dropdown-divider"></div>
         </div>
       </li>
+      <li>
+        <input class="form-control mr-sm-2" value="Fecha de nacimiento" disabled>
+      </li>
+      <li>
+        <input class="form-control mr-sm-2" id="campoModificar" value="Fecha_Nacimiento" style="display: none" disabled>
+      </li>
 			<li class="nav-item active">
         <a class="nav-link" href="../index.html">Volver al menu principal <span class="sr-only">(current)</span></a>
       </li>
@@ -50,6 +56,21 @@
   </div>
 </nav>
 <!--NavBar----------------------------------------------------------------------->
+
+
+
+		<form onsubmit="loadDoc()">
+
+			<input class="form-control" id="cedula" type="number" placeholder="Introduzca el numero de Cedula del empleado a modificar">
+
+			<input class="form-control" id="infoAmodificar" type="date">
+
+			<button type="submit" class="btn btn-outline-danger" > Modificar </button>
+		</form>
+
+		<div id="tabla"></div>
+
+		<p id="respuesta"></p>
 
 	</body>
 </html>

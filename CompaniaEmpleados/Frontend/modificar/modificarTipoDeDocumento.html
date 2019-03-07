@@ -43,6 +43,12 @@
           <div class="dropdown-divider"></div>
         </div>
       </li>
+      <li>
+        <input class="form-control mr-sm-2" value="Tipo de documento" disabled>
+      </li>
+      <li>
+        <input class="form-control mr-sm-2" id="campoModificar" value="Tipo_Documento" style="display: none" disabled>
+      </li>
 			<li class="nav-item active">
         <a class="nav-link" href="../index.html">Volver al menu principal <span class="sr-only">(current)</span></a>
       </li>
@@ -50,6 +56,25 @@
   </div>
 </nav>
 <!--NavBar----------------------------------------------------------------------->
+
+
+
+		<div>
+
+			<input class="form-control" id="cedula" type="number" placeholder="Introduzca el numero de Cedula del empleado a modificar">
+
+      <select class="form-control" name="infoAmodificar" id="infoAmodificar" required>
+        <option value="C.C.">Cedula de ciudadania</option>
+        <option value="T.I.">Tarjeta de identidad</option>
+        <option value="D.E.">Documento Extranjero</option>
+      </select>
+
+			<button type="button" onclick="loadDoc()" class="btn btn-outline-danger" > Modificar </button>
+		</div>
+
+		<div id="tabla"></div>
+
+		<p id="respuesta"></p>
 
 	</body>
 </html>

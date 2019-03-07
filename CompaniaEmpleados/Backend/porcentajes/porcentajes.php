@@ -8,8 +8,8 @@ $cedula=$_GET['cedula'];
 
 //Query para poder modificar los campos
 $sql = "UPDATE `empleados`
-    			SET  `Porcentaje` = '$porcentajeAsignado'
-					WHERE `empleados`.`Numero_Documento` = $cedula ;";
+    		SET  `Porcentaje` = '$porcentajeAsignado'
+				WHERE `empleados`.`Numero_Documento` = $cedula ;";
 
-          //Se ejecuta el query
+        //Se ejecuta el query
         $result = mysqli_query($conexion,$sql);

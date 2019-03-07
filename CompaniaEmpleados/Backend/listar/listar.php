@@ -6,9 +6,9 @@ $sql = "SELECT * FROM empleados";
 
 $result = mysqli_query($conexion,$sql);
 
-echo '<table class="table table-sm table-dark">
+echo '<table class="table table-hover table-dark">
       <thead>
-        <tr class="bg-danger">
+        <tr>
           <th scope="col">#</th>
           <th scope="col">Nombres</th>
           <th scope="col">Apellidos</th>
@@ -19,7 +19,6 @@ echo '<table class="table table-sm table-dark">
           <th scope="col">Tel</th>
           <th scope="col">Dir</th>
           <th scope="col">Nacionalidad</th>
-          <th scope="col">% asignado</th>
         </tr>
         <tbody>';
 
@@ -27,16 +26,15 @@ echo '<table class="table table-sm table-dark">
 while ($row = mysqli_fetch_array($result)){
   echo '<tr>
     <th scope="row">'.$row[0].'</th>
-    <td class="bg-primary">'.$row[1].'</td>
+    <td>'.$row[1].'</td>
     <td>'.$row[2].'</td>
-    <td class="bg-primary">'.$row[3].'</td>
+    <td >'.$row[3].'</td>
     <td>'.$row[4].'</td>
-    <td class="bg-primary">'.$row[5].'</td>
+    <td >'.$row[5].'</td>
     <td>'.$row[6].'</td>
-    <td class="bg-primary">'.$row[7].'</td>
+    <td >'.$row[7].'</td>
     <td>'.$row[8].'</td>
-    <td class="bg-primary">'.$row[9].'</td>
-    <td>'.$row[10].'</td>
+    <td >'.$row[9].'</td>
   </tr>';
 }
 echo "</thead>

@@ -9,19 +9,3 @@ body{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
 
 }
-
-form{
-  width: 40%;
-  margin: auto;
-  font-family: 'Courgette', cursive;
-}
-
-#button-sub{
-  margin-top: 10%;
-  margin-bottom: 10%;
-}
-
-#tituloPrincipal{
-  text-align: center;
-  font-family: 'Cinzel', serif;
-}
