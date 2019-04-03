@@ -1,0 +1,12 @@
+.centrador {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin: 0 0 auto;
+    margin-top: 15px;
+    text-align: center;
+}
+
+body{
+    background-image: url('../img/bg-portfolio.jpg');
+}
