@@ -1,39 +1,24 @@
 <!DOCTYPE html>
-
-<html lang="es">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ejemplo canvas mano alzada</title>
+    <meta charset="UTF-8">
+    <title>Drag Drop Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.8/interact.min.js"></script>
+    <script src="cIndex.js"></script>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-
 <body>
+    <div id="demo">
+        <div id="drag-1" class="draggable">
+            <textarea style="min-width: 100%; min-height: 100%;"></textarea>
+        </div>
 
-    <div class='centrador'>
-        <canvas id='canvas' width="200" height="200" style='border: 1px solid #CCC;'>
-            <p>Tu navegador no soporta canvas</p>
-        </canvas>
-    </div>
-    <div class='centrador'>
-        <form id='formCanvas' method='post' action='#' ENCTYPE='multipart/form-data'>
-            <button type='button' onclick='LimpiarTrazado()'>Borrar</button>
-            <button type='button' onclick='GuardarTrazado()'>Guardar</button>
-            <input type='hidden' name='imagen' id='imagen' />
-        </form>
+        <div id="drag-2" class="draggable">
+            <textarea style="min-width: 100%; min-height: 100%;"></textarea>
+        </div>
     </div>
 
-    <script type="text/javascript" src="canvas.js"></script>
 
-
-
-    <?php if (isset($_POST['imagen'])) { ?>
-    <div class='centrador'>
-        <img src="<?php echo $_POST['imagen'];?>" border="1">
-    </div>
-    <?php } ?>
-
+    
 </body>
-
 </html>
