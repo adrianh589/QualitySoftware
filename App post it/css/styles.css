@@ -3,26 +3,25 @@ body{
     
 }
 
-.texto{
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-}
-
-
-
-#drag-1, #drag-2 {
-    width: 25%;
-    height: 100%;
+.draggable{
+    width: 10%;
+    height: 50%;
     min-height: 6.5em;
     margin: 10%;
     background-color: #29e;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
     color: white;
     border-radius: 0.75em;
     padding: 4%;
     user-select: none;
     -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-  
-  
+            transform: translate(0px, 0px);             
+}
+
+.draggable{  animation: 1.2s bgrandom infinite; }
+
+@keyframes bgrandom {
+    0% { background: linear-gradient(90deg, rgba(81, 255, 0, 0.98) 50%, rgba(81, 255, 0, 0.98) 0%); }
+    
+    100% { background: linear-gradient(90deg, rgba(47, 10, 180, 0.96) 50%, rgba(47, 10, 180, 0.96) 0%); }
+    }
