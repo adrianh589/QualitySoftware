@@ -1,0 +1,34 @@
+.container {
+      border-radius: 120px 10px 164px 10px;
+      -moz-border-radius: 120px 10px 164px 10px;
+      -webkit-border-radius: 120px 10px 164px 10px;
+      border: 0px solid #000000;
+      background-color: #000000;
+
+      -webkit-box-shadow: 65px 23px 30px 9px rgba(0,0,0,0.75);
+      -moz-box-shadow: 65px 23px 30px 9px rgba(0,0,0,0.75);
+      box-shadow: 65px 23px 30px 9px rgba(0,0,0,0.75);
+
+      margin: 15% 0% 10% 25%;
+      height: 250px;
+
+      background-image: linear-gradient(to left bottom, #ff0000, #ff6200, #fe9200, #f6bb00, #ebe112);
+}
+
+#inputNumber{
+      width: 50%;
+      margin: auto;
+      
+}
+
+#buttonCalculate{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 20%;
+}
+
+#showResult{
+      font-family: 'Akronim', cursive;
+      font-size: larger;
+}
