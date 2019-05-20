@@ -1,20 +1,13 @@
 function loadDoc() {
-  var xhttp = new XMLHttpRequest();
   var prueba = document.getElementById("calculos").value;
-  var calculo = prueba.replace("+","%2B");//Se reemplaza el + por su codificacion correcta
-  xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            var result = document.getElementById("calculos").value = this.responseText;
-            if (result == Infinity) {
-              document.getElementById("calculos").value = "Error al dividir por 0";
-            } else {
-              document.getElementById("calculos").value = this.responseText;
-            }
-           
-          }
-        };
-        xhttp.open("GET", "http://api.mathjs.org/v4/?expr="+calculo,true);
-        xhttp.send();
+  var result = math.eval(prueba);
+
+  if (result === Infinity) {
+    document.getElementById("calculos").value = "Imposible dividir por 0";
+  } else {
+    document.getElementById("calculos").value = result;
+  }
+  
 }
 
 function escribirNumero1(){
