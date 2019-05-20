@@ -210,3 +210,8 @@ html,
             -o-transform: translateX(0) !important;
             transition-delay: 1s;
         }
+
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
