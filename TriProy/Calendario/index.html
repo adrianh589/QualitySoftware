@@ -75,6 +75,8 @@
                         calendar.addEvent(nuevoEvento);
 
                         $('#modalEventos').modal('toggle');
+                        
+                        calendar.removeEvent(nuevoEvento);
 
                     });
                     //alert('Date: ' + info.dateStr);
