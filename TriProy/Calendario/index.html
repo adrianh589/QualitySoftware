@@ -21,7 +21,7 @@
     <script src="js/popper.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var selectedDAt;
+            var id = 0;
             var calendarEl = document.getElementById('calendar');
             let calendar
             calendar = new FullCalendar.Calendar(calendarEl, {
@@ -43,20 +43,19 @@
                         start: '2019-04-01'
                     }
                 ],
-                select:
-                    function (start, end) {
-                        var selDate = new Date(start);
-                        // add your function
-                    },
                 eventClick: function (info) {
                     $('#tituloEvento').html(info.event.title);
                     $('#descripcionEvento').html(info.event.descripcion);
-                    $('#exampleModal').modal();
+                    $('#modalEventos').modal();
+
+                    $('#btnBorrar').click(function () {
+                        calendar.removeEvent(info.event.id);
+                    });
                 },
 
                 dateClick: function (info) {
 
-                    var newDAte = info.dateStr;
+                    newDAte = info.dateStr;
 
                     $('#modalEventos').modal();
 
@@ -64,23 +63,25 @@
                     $('#btnAgregar').click(function () {
 
                         var nuevoEvento = {
+                            id: id,
                             title: $('#txtTitulo').val(),
-                            descripcion: $('#txtDescripcion').val(),
                             start: newDAte,
                             allDay: true,
                             descripcion: $('#txtDescripcion').val(),
 
                         };
 
+                        
+
                         calendar.addEvent(nuevoEvento);
 
                         $('#modalEventos').modal('toggle');
-                        
+
                         event.remove(nuevoEvento);
 
+                        id++;
+
                     });
-                    //alert('Date: ' + info.dateStr);
-                    //alert('Resource ID: ' + info.resource.id);
                 }
             })
             calendar.render();
@@ -130,7 +131,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" id="btnAgregar">Agregar</button>
                     <button type="button" class="btn btn-secondary">Modificar</button>
-                    <button type="button" class="btn btn-danger">Borrar</button>
+                    <button type="button" class="btn btn-danger" id="btnBorrar">Borrar</button>
                     <button type="button" class="btn btn-dafault" data-dismiss="modal">Cancelar</button>
                 </div>
             </div>
