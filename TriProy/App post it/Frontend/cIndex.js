@@ -12,9 +12,7 @@ if(cards == null){
 //Function to load cards in local storage
 function loadLocal(){
   for (let index = 0; index < cards.length; index++) {
-    var div = document.createElement('div');
-    div.innerHTML = cards[index];
-    document.getElementById('content').appendChild(div);
+    document.getElementById('content').innerHTML += cards[index];
   }
 }
 
