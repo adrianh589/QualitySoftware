@@ -1,3 +1,27 @@
+//***************************************
+//**Local Storage********************* */
+//************************************ */
+
+var cards = JSON.parse(localStorage.getItem('cards'));
+var temporalArray=[];
+
+if(cards == null){
+  cards = [];
+}
+
+//Function to load cards in local storage
+function loadLocal(){
+  for (let index = 0; index < cards.length; index++) {
+    var div = document.createElement('div');
+    div.innerHTML = cards[index];
+    document.getElementById('content').appendChild(div);
+  }
+}
+
+//***************************************
+//**Cards***************************** */
+//************************************ */
+
 //ID to identify the cards
 var cardID = 0;
 
@@ -41,6 +65,11 @@ function createCard() {
   $("#card"+ cardID).draggable({ handle:'#header'});
 
   cardID++;
+  
+  //Save cards in the local Storage
+  var convert = div.outerHTML;
+  cards.push(convert);
+  window.localStorage.setItem('cards', JSON.stringify(cards));
 }
 
 //Function to change the color of the letter of the cards
